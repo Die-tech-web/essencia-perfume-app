@@ -11,7 +11,7 @@ const testimonials = [
     location: "Paris, France",
     rating: 5,
     text: "Une expérience exceptionnelle ! Les parfums sont authentiques et le service client est irréprochable. Je recommande vivement Essencia.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
+    image: "/images/parfums/chanel5.png",
     perfume: "Chanel N°5",
   },
   {
@@ -20,17 +20,17 @@ const testimonials = [
     location: "Lyon, France",
     rating: 5,
     text: "Livraison rapide et emballage soigné. Les échantillons offerts sont un vrai plus. Ma femme a adoré son cadeau.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+    image: "/images/parfums/sauvage.png",
     perfume: "Dior Sauvage",
   },
   {
     id: 3,
     name: "Sophie Laurent",
-    location: "Montréal, Canada",
+    location: "Dakar, Sénégal",
     rating: 5,
-    text: "Enfin une boutique en ligne qui propose des parfums de qualité au Canada. Les prix sont compétitifs et le choix est impressionnant.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop",
-    perfume: "Tom Ford Black Orchid",
+    text: "Enfin une boutique en ligne qui propose des parfums de qualité au Sénégal. Les prix sont compétitifs et le choix est impressionnant.",
+    image: "/images/parfums/oud.png",
+    perfume: "Tom Ford Oud Wood",
   },
 ]
 

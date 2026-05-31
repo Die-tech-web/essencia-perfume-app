@@ -186,7 +186,7 @@ export function Footer() {
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs text-cream/40 font-[var(--font-sans)]">
-              © 2024 Essencia. Tous droits réservés.
+              © 2026 Essencia. Tous droits réservés.
             </p>
             <div className="flex items-center gap-4">
               <Link

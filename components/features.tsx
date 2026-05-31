@@ -7,7 +7,7 @@ const features = [
   {
     icon: Truck,
     title: "Livraison Express",
-    description: "Livraison gratuite dès 100€ d'achat partout au Canada",
+    description: "Livraison gratuite dès 65 000 F CFA d'achat partout au Sénégal",
   },
   {
     icon: Shield,

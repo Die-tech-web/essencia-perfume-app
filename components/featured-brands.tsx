@@ -7,22 +7,22 @@ import Image from "next/image"
 const brands = [
   {
     name: "Chanel",
-    image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/chanel5.png",
     href: "/marques/chanel",
   },
   {
     name: "Dior",
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/dior.png",
     href: "/marques/dior",
   },
   {
     name: "Tom Ford",
-    image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/tom%20for.png",
     href: "/marques/tom-ford",
   },
   {
     name: "Gucci",
-    image: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/gucci.png",
     href: "/marques/gucci",
   },
 ]

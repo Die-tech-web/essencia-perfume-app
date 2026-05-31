@@ -44,7 +44,7 @@ export function Header() {
           <div className="container mx-auto px-6">
             <div className="flex items-center justify-between h-10 text-xs tracking-[0.2em] uppercase">
               <span className="text-muted-foreground font-[var(--font-sans)]">
-                Livraison gratuite dès 100€
+                Livraison gratuite dès 65 000 F CFA
               </span>
               <div className="flex items-center gap-6 text-muted-foreground font-[var(--font-sans)]">
                 <Link href="/contact" className="hover:text-primary transition-colors">

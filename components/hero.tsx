@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Sparkles } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 
 export function Hero() {
   return (
@@ -66,7 +65,7 @@ export function Hero() {
             >
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-xs tracking-[0.3em] uppercase text-primary font-[var(--font-sans)]">
-                Collection Exclusive 2024
+                Collection Exclusive 2026
               </span>
             </motion.div>
 
@@ -76,8 +75,8 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif leading-[1.1] text-balance"
             >
-              <span className="block text-foreground">{"L'Art de la"}</span>
-              <span className="block text-primary italic mt-2">Fragrance</span>
+              <span className="block text-foreground">{"L'art de laisser"}</span>
+              <span className="block text-primary italic mt-2">une empreinte</span>
             </motion.h1>
 
             <motion.p
@@ -168,12 +167,13 @@ export function Hero() {
 
               {/* Main Image Container */}
               <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-b from-card to-background">
-                <Image
-                  src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=800&auto=format&fit=crop"
-                  alt="Luxury Perfume Collection"
-                  fill
-                  className="object-cover opacity-80"
-                  priority
+                <video
+                  src="/images/parfums/coco.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
               </div>

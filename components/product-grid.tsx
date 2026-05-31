@@ -6,14 +6,22 @@ import Link from "next/link"
 import Image from "next/image"
 import { Heart, ShoppingBag, Star } from "lucide-react"
 
+const EUR_TO_XOF = 655.957
+
+function formatFcfaFromEuro(euroPrice: number) {
+  const estimatedFcfa = Math.ceil((euroPrice * EUR_TO_XOF) / 500) * 500
+  return `${new Intl.NumberFormat("fr-FR").format(estimatedFcfa)} F CFA`
+}
+
 const products = [
   {
     id: 1,
     name: "N°5 Eau de Parfum",
     brand: "Chanel",
+    description: "Un floral aldéhydé iconique, élégant et intemporel.",
     price: 185,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/chanel5.png",
     rating: 4.9,
     reviews: 234,
     isNew: true,
@@ -23,9 +31,10 @@ const products = [
     id: 2,
     name: "Sauvage Eau de Toilette",
     brand: "Dior",
+    description: "Fraîcheur vibrante et bois ambrés pour une signature masculine.",
     price: 125,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/sauvage.png",
     rating: 4.8,
     reviews: 189,
     isNew: false,
@@ -33,11 +42,12 @@ const products = [
   },
   {
     id: 3,
-    name: "Black Orchid",
-    brand: "Tom Ford",
+    name: "Black Opium Eau de Parfum",
+    brand: "Yves Saint Laurent",
+    description: "Un oriental gourmand, café et vanille, intensément sensuel.",
     price: 210,
     originalPrice: 250,
-    image: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/blacopium.png",
     rating: 4.7,
     reviews: 156,
     isNew: false,
@@ -45,11 +55,12 @@ const products = [
   },
   {
     id: 4,
-    name: "Libre Eau de Parfum",
-    brand: "Yves Saint Laurent",
+    name: "J'adore Eau de Parfum",
+    brand: "Dior",
+    description: "Un bouquet floral lumineux aux notes élégantes et féminines.",
     price: 145,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/jadore.png",
     rating: 4.8,
     reviews: 201,
     isNew: true,
@@ -59,9 +70,10 @@ const products = [
     id: 5,
     name: "Good Girl",
     brand: "Carolina Herrera",
+    description: "Une dualité captivante entre tubéreuse lumineuse et fève tonka.",
     price: 135,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/goodgirl.png",
     rating: 4.6,
     reviews: 178,
     isNew: false,
@@ -71,9 +83,10 @@ const products = [
     id: 6,
     name: "Oud Wood",
     brand: "Tom Ford",
+    description: "Un bois rare et sophistiqué, épicé, fumé et profondément chic.",
     price: 295,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/oud.png",
     rating: 4.9,
     reviews: 145,
     isNew: false,
@@ -83,9 +96,10 @@ const products = [
     id: 7,
     name: "La Vie Est Belle",
     brand: "Lancôme",
+    description: "Une signature sucrée-florale joyeuse autour de l'iris gourmand.",
     price: 115,
     originalPrice: 140,
-    image: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/vieestbell=.png",
     rating: 4.7,
     reviews: 223,
     isNew: false,
@@ -95,9 +109,10 @@ const products = [
     id: 8,
     name: "Bleu de Chanel",
     brand: "Chanel",
+    description: "Un aromatique boisé moderne, frais, profond et affirmé.",
     price: 165,
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=600&auto=format&fit=crop",
+    image: "/images/parfums/bleu%20chanel.png",
     rating: 4.8,
     reviews: 267,
     isNew: true,
@@ -184,6 +199,9 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
           <h3 className="mt-1 text-lg font-serif text-foreground group-hover/link:text-primary transition-colors">
             {product.name}
           </h3>
+          <p className="mt-2 text-sm text-muted-foreground leading-relaxed font-[var(--font-sans)]">
+            {product.description}
+          </p>
         </Link>
 
         {/* Rating */}
@@ -199,10 +217,10 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
 
         {/* Price */}
         <div className="mt-2 flex items-center gap-2">
-          <span className="text-lg font-serif text-primary">{product.price}€</span>
+          <span className="text-lg font-serif text-primary">{formatFcfaFromEuro(product.price)}</span>
           {product.originalPrice && (
             <span className="text-sm text-muted-foreground line-through font-[var(--font-sans)]">
-              {product.originalPrice}€
+              {formatFcfaFromEuro(product.originalPrice)}
             </span>
           )}
         </div>

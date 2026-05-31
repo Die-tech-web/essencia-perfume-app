@@ -66,7 +66,7 @@ export function Newsletter() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-serif text-balance"
           >
-            Recevez <span className="text-primary italic">25€</span> de réduction
+            Recevez <span className="text-primary italic">16 500 F CFA</span> de réduction
           </motion.h2>
 
           {/* Description */}
@@ -77,7 +77,7 @@ export function Newsletter() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto font-[var(--font-sans)]"
           >
-            Inscrivez-vous à notre newsletter et recevez un certificat cadeau de 25€ 
+            Inscrivez-vous à notre newsletter et recevez un certificat cadeau de 16 500 F CFA 
             pour votre anniversaire chaque année.
           </motion.p>
 
